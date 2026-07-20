@@ -2,7 +2,7 @@
 // const API_BASE = "/api";
 
 // on Production
-const API_BASE = import.meta.env.VITE_API_BASE || "/api";
+const API_BASE = "https://crud-seven-wine.vercel.app/api" || "/api";
 
 const getAuthHeaders = (token) => ({
   "Content-Type": "application/json",
