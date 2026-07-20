@@ -1,14 +1,13 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default ({ mode }) => {
-  const env = loadEnv(mode, process.cwd());
 
   return defineConfig({
     plugins: [react()],
     server: {
       proxy: {
-        "/api": env.VITE_API_BASE,
+        "/api": "https://crud-seven-wine.vercel.app/",
       },
     },
   });
