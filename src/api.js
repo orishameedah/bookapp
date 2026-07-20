@@ -1,4 +1,8 @@
-const API_BASE = "/api";
+// On Development
+// const API_BASE = "/api";
+
+// on Production
+const API_BASE = import.meta.env.VITE_API_BASE || "/api";
 
 const getAuthHeaders = (token) => ({
   "Content-Type": "application/json",
